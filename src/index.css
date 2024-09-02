@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  background: url("src/assets/Video/code-2023-11-27-05-30-48-utc.mp4") black;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  scroll-behavior: smooth;
+  user-select: auto;
+}
+
+
+.fixed-nav {
+  position: fixed;
+  transform:  translateY(2%);
+  opacity: 1;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  z-index: 10;
+}
+
+
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(2.5);
+  }
+}
+
+
+/* For WebKit browsers (e.g., Chrome, Safari) */
+.app::-webkit-scrollbar {
+  width: 5px;
+ 
+}
+
+.app::-webkit-scrollbar-track {
+  background: #ffffff00; /* color of the track */
+}
+
+.app::-webkit-scrollbar-thumb {
+  background: #ffffff; /* color of the scrollbar */
+  border-radius: 2px;
+}

@@ -1,0 +1,113 @@
+/* For WebKit browsers (e.g., Chrome, Safari) */
+.app::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  .app::-webkit-scrollbar-track {
+    background: #ffffff00; /* color of the track */
+  }
+  
+  .app::-webkit-scrollbar-thumb {
+    background: #c60101; /* color of the scrollbar */
+    border-radius: 2px;
+  }
+  
+  /* Make sure the .app class has height and overflow */
+  .app {
+    min-height: 100vh;
+    overflow-y: scroll;
+  }
+  
+
+  .projects-container {
+    opacity: 0;
+    transform: translateY(20px); /* Example: start slightly below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.projects-container.animate {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+}
+
+  .input-container {
+    opacity: 0;
+    transform: translateY(20px); /* Example: start slightly below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.input-container.animate {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+}
+
+
+  .hero-container {
+    opacity: 0;
+    transform: translateY(20px); /* Example: start slightly below */
+    transition: opacity 0.9s ease-out, transform 0.6s ease-out;
+}
+
+.hero-container.animate {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+}
+
+  .exp-container {
+    opacity: 0;
+    transform: translateY(20px); /* Example: start slightly below */
+    transition: opacity 0.9s ease-out, transform 0.6s ease-out;
+}
+
+.exp-container.animate {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+}
+
+
+.work-container {
+    opacity: 0;
+    transform: translateY(20px); /* Example: start slightly below */
+    transition: opacity 0.9s ease-out, transform 0.6s ease-out;
+}
+
+.work-container.animate {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+}
+
+.about-container {
+    opacity: 0;
+    transform: translateY(20px); /* Example: start slightly below */
+    transition: opacity 0.9s ease-out, transform 0.6s ease-out;
+}
+
+.about-container.animate {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+}
+
+.contact-container {
+    opacity: 0;
+    transform: translateY(20px); /* Example: start slightly below */
+    transition: opacity 0.9s ease-out, transform 0.6s ease-out;
+}
+
+.contact-container.animate {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+}
+
+.iframe-container {
+    opacity: 0;
+    transform: translateY(20px); /* Example: start slightly below */
+    transition: opacity 0.9s ease-out, transform 0.6s ease-out;
+}
+
+.iframe-container.animate {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+}
+
+
+
