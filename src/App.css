@@ -108,6 +108,34 @@
     opacity: 1;
     transform: translateY(0); /* End at original position */
 }
+.work-details-container {
+    opacity: 0;
+    transform: translateY(20px); /* Example: start slightly below */
+    transition: opacity 0.9s ease-out, transform 0.6s ease-out;
+}
+
+.work-details-container.animate {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+}
 
 
 
+
+/* Animation for the icon container */
+.icon-container {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .icon-container.desable {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  
+  .icon-container.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+
+  

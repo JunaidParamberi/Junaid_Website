@@ -37,13 +37,14 @@ function Hero() {
 
   return (
     <div ref={ref} 
-    className={`hero-container ${isVisible ? 'animate' : ''} w-full flex justify-center items-center flex-col`}>
+    className={`hero-container ${isVisible ? 'animate' : ''} w-full flex justify-center items-center flex-col mt-20`}>
       <div className='w-[90%] flex flex-col justify-center'>
         <div className='text-[250px] flex flex-col font-black max-md:text-[70px]'>
           <h1 className='tracking-tighter'>Websites &</h1>
           <div className='flex gap-7 max-md:flex-col max-md:items-start max-md:gap-2'>
             <h1 className='tracking-tighter mt-[-130px] max-md:mt-[-20px]'>Branding</h1>
             <div className='flex justify-center items-center'>
+              
               <a
                 href='#projects'
                 className='font-medium text-[20px] max-md:text-[16px]

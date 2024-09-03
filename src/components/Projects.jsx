@@ -55,7 +55,7 @@ function Projects() {
 
             </div>
 
-            <div className='w-full flex flex-wrap flex-grow  max-md:flex-col'>
+            <div className='w-full flex justify-between flex-wrap flex-grow  max-md:flex-col'>
 
                 {
                     displayedItems.map((item, index)=> (

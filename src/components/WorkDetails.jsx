@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { projectsItems } from '../ProjectItems';
 import ErrorPage from '../Pages/ErrorPage';
@@ -10,23 +10,35 @@ import ScrollToTop from './ScrollToTop';
 
 export const FullImage = ({ image, src, stateSeter }) => {
 
-
+console.log(image)
 
   return (
-    <div className='w-full absolute h-[100vh] top-0 bottom-0 z-50 
-    bg-[#000000c7] flex justify-center items-center overflow-hidden'>
+    <div className={`w-full absolute h-[100vh] top-0 left-0  right-0 bottom-0 z-[1000]
+    bg-[#000000c7] flex flex-col  ${image.length <= 1 ? " justify-center items-center overflow-hidden" : "overflow-y-scroll"} `}>
       <ScrollToTop/>
       <div
-        className='absolute right-9 top-9 bg-[#ffffff20] rounded-full p-1 cursor-pointer'
+        className=' right-9 top-9 bg-[#ffffff20] rounded-full p-1 cursor-pointer fixed'
         onClick={() => stateSeter()}
       >
         <CloseIcon fontSize='large' />
       </div>
-      <img
-        className='h-[90vh] max-md:w-[90%] max-md:h-auto '
-        src={image}
-        alt={src}
-      />
+      <div className=' w-full flex justify-center items-center flex-col gap-10'>
+        
+    { 
+    image.map((im, index)=>(
+      <div
+      key={index}
+      className=' w-full flex justify-center'
+      >
+        <img 
+            className='h-auto w-[60%] max-md:w-[90%] max-md:h-auto '
+            src={im}
+            alt={src}
+            />
+      </div>
+
+) )}
+</div>
     </div>
   );
 };
@@ -59,16 +71,47 @@ function WorkDetails() {
     return <ErrorPage />;
   }
 
+
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+      const observer = new IntersectionObserver(
+          ([entry]) => {
+              if (entry.isIntersecting) {
+                  setIsVisible(true);
+                  observer.unobserve(ref.current); // Stop observing once it's visible
+              }
+          },
+          { threshold: 0.1 } // Trigger when 10% of the element is visible
+      );
+
+      if (ref.current) {
+          observer.observe(ref.current);
+      }
+
+      return () => {
+          if (ref.current) {
+              observer.unobserve(ref.current);
+          }
+      };
+  }, []);
+
+
+
   return (
     <>
       {imageIsActive && (
         <FullImage
-          image={images[currentImageIndex]}
+          image={images}
           src={filteredItem.name}
           stateSeter={setImageIsActive}
         />
       )}
-      <div className={`w-full flex flex-col mt-1 justify-center items-center ${imageIsActive ? "hidden" : ""}`}>
+      <div 
+      ref={ref} 
+      
+      className={` work-details-container ${isVisible ? 'animate' : ''} w-full flex flex-col mt-1 justify-center items-center ${imageIsActive ? "hidden" : ""}`}>
         <div className='mt-9 w-full flex justify-center min-h-[30vh] flex-col items-center gap-4'>
           <div className='w-[90%] flex items-center mb-4'>
             <div className='flex gap-2 cursor-pointer'>
@@ -95,7 +138,7 @@ function WorkDetails() {
             )}
             <img
               onClick={() => setImageIsActive(true)}
-              className='w-[90%] h-[100%] object-cover'
+              className='w-[90%] h-[100%] object-cover hover:cursor-zoom-in'
               src={images[currentImageIndex]}
               alt={filteredItem.name}
             />

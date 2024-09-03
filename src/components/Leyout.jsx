@@ -31,7 +31,7 @@ function Leyout() {
       
       <Navbar/>
 
-
+      
       <Outlet/>
 
       {/* <a 
