@@ -26,11 +26,14 @@ function Leyout() {
         };
     }, []);
   return (
-    <div>
+    <div className='min-h-[100vh] flex flex-col justify-between'>
   
       
       <Navbar/>
+
+
       <Outlet/>
+
       {/* <a 
       href="https://wa.me/971581976818" 
       target="_blank" rel="noopener noreferrer"

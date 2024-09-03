@@ -10,6 +10,7 @@ import ErrorPage from './Pages/ErrorPage';
 import LinearProgress from '@mui/material/LinearProgress';
 import ProjectDetailsPage from './Pages/ProjectDetailsPage';
 import LoadingPage from './components/LoadingPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [loading, setLoading] = useState(false);
