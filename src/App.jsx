@@ -89,6 +89,9 @@ function App() {
     updateTitle();
   }, [location.pathname]);
 
+
+  console.log(location.pathname)
+
   // if(isMounted){
   //   return <LoadingPage/>
   // }

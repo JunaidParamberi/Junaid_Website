@@ -153,7 +153,7 @@ function About() {
         <div className=' w-[90%] relative '>
           <div className=' absolute right-24 bottom-[500px] z-50 max-md:right-[10px] max-md:top-[220px] '>
 
-          <Rating/>
+          {/* <Rating/> */}
           </div>
 
           <h2 className=' text-center text-[30px]'>Hello</h2>
@@ -172,9 +172,13 @@ function About() {
           </div>
           <div className=' flex w-full justify-center'>
 
-          <p className=' w-[90%] max-md:w-[95%] max-md:p-3 text-wrap text-center mt-2 border-r-[5px] border-l-[5px] ] text-[18px] p-7 rounded-xl max-md:text-[13px] '>Welcome to my creative world! I'm a versatile artist with a passion for visual storytelling. As a Graphic Designer, I transform ideas into stunning visuals that captivate and communicate.
-            My lens is my canvas, and as a Photographer, I freeze moments in time, turning them into unforgettable memories. But that's just the beginning.I'm also an experienced Videographer, capturing emotions and narratives through my lens, and a skilled Video Editor who weaves together footage into cinematic masterpieces.
-            And to add a digital dimension to my creativity, I'm a Web Developer, crafting interactive online experiences that bridge imagination and technology. Every project I take on is a unique opportunity to blend artistry and innovation.
+          <p className=' w-[90%] max-md:w-[95%] max-md:p-3 text-wrap text-justify mt-2 border-r-[5px] border-l-[5px] ] text-[18px] p-7 rounded-xl max-md:text-[13px] '>
+          I'm Junaid Paramberi, a dedicated and passionate Web Developer and Graphic Designer with a rich background in visual arts and technology. My journey began as a graphic designer and video editor, where I cultivated my creative skills and developed a keen eye for detail. This foundation in visual storytelling laid the groundwork for my future endeavors. <br /> <br />
+
+However, my lifelong passion for technology always urged me to explore new horizons beyond traditional design. In 2022, I took a bold step into the world of web development, immersing myself in the latest technologies and methodologies. Through self-directed learning and practical application, I became a highly capable developer, earning certifications from the esteemed Harvard University’s CS50 and Meta. These experiences provided me with a robust understanding of computer science principles, web technologies, and industry best practices. <br /> <br />
+
+Today, I leverage my artistic background and technical expertise to create innovative digital solutions that captivate and engage users. I specialize in designing stunning graphics and developing responsive, user-friendly websites that not only look exceptional but also provide seamless user experiences. My goal is to merge creativity with functionality, ensuring that each project I undertake delivers value and leaves a lasting impression.
+Whether I’m crafting a brand identity, developing a dynamic web application, or enhancing user interfaces, I am committed to pushing the boundaries of design and technology to create meaningful and impactful digital experiences.
             {/* <div className=' bg-white h-[0.5px] w-full mt-1'></div> */}
             </p>
           </div>

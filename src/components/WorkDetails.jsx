@@ -17,10 +17,10 @@ console.log(image)
     bg-[#000000c7] flex flex-col  ${image.length <= 1 ? " justify-center items-center overflow-hidden" : "overflow-y-scroll"} `}>
       <ScrollToTop/>
       <div
-        className=' right-9 top-9 bg-[#ffffff20] rounded-full p-1 cursor-pointer fixed'
+        className=' right-9 top-9 bg-[#ffffff20] rounded-full p-1 cursor-pointer fixed active:bg-[#ffffff6e] duration-200 active:scale-105'
         onClick={() => stateSeter()}
       >
-        <CloseIcon fontSize='large' />
+        <CloseIcon sx={{width : "30px", height : "30px"}} />
       </div>
       <div className=' w-full flex justify-center items-center flex-col gap-10'>
         
@@ -138,7 +138,7 @@ function WorkDetails() {
             )}
             <img
               onClick={() => setImageIsActive(true)}
-              className='w-[90%] h-[100%] object-cover hover:cursor-zoom-in'
+              className='w-[90%] h-[90%] object-cover hover:cursor-zoom-in'
               src={images[currentImageIndex]}
               alt={filteredItem.name}
             />
